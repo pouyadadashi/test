@@ -1,0 +1,47 @@
+# macOS related
+*.DS_Store
+
+# Windows related
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# JetBrains IDE (Android Studio, IntelliJ) related
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/libraries/
+
+# Flutter build artifacts
+**/android/.gradle/
+**/android/app/build/
+**/android/gradle/
+**/android/.idea/
+**/android/local.properties
+
+# Xcode (iOS/macOS) related
+**/ios/Flutter/Flutter.podspec
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Runner.xcworkspace/
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# VS Code settings (optional)
+.vscode/
+
+# Dart analysis and temporary files
+analysis_options.yaml
+.packages
+*.lock
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+*.gql.dart
+
+# Firebase related
+firebase_app_id_file.json
+
+# Secrets (Add manually in your project root if applicable)
+.env
+*.keystore
+google-services.json
