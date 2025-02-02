@@ -27,16 +27,17 @@ jobs:
       - name: Build iOS App (Without Code Signing)
         run: flutter build ios --release --no-codesign
 
+      - name: Ensure Build Directory Exists
+        run: mkdir -p build/ios/iphoneos
+
       - name: Create Payload Directory
-        run: mkdir Payload
-        working-directory: build/ios/iphoneos
+        run: mkdir -p build/ios/iphoneos/Payload
 
       - name: Move Runner.app into Payload
-        run: mv Runner.app Payload/
-        working-directory: build/ios/iphoneos
+        run: mv build/ios/iphoneos/Runner.app build/ios/iphoneos/Payload/
 
       - name: Zip IPA File
-        run: zip -qq -r -9 FlutterIpaExport.ipa Payload
+        run: zip -qq -r -9 build/ios/iphoneos/FlutterIpaExport.ipa Payload
         working-directory: build/ios/iphoneos
 
       - name: Upload IPA to GitHub Release
